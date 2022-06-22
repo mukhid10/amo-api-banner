@@ -14,6 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/pictures", express.static(path.join(__dirname, "pictures")));
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("hei welcome in APi amo");
+});
+
 //allRouter
 const allRouter = require("./routes/index");
 app.use(allRouter);
