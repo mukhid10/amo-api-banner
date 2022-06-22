@@ -13,10 +13,6 @@ const {
 //register & Login
 router.post("/register", addUser);
 router.post("/login", addUserLogin);
-
-const authJWT = require("../auth");
-router.use(authJWT);
-
 router.get("/", getAll);
 router.get("/:id", getById);
 router.put("/:id", updateUser);
